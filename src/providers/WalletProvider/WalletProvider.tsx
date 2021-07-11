@@ -1,11 +1,11 @@
 import React from "react";
 import Decimal from "decimal.js";
 import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
-import { Web3Provider } from "@ethersproject/providers";
+import { Web3Provider, JsonRpcProvider } from "@ethersproject/providers";
 import { bsc, injected } from "./connectorsPromises";
 import { formatEther } from "@ethersproject/units";
 import { BigNumber, ethers } from "ethers";
-import { chain, localStorageKey } from "../../config";
+import { chain, config, localStorageKey } from "../../config";
 import {
   addChainBSC,
   addChainMatic,
@@ -29,7 +29,7 @@ export interface WalletContextValue {
   status: WalletStatus;
   library: Web3Provider | undefined;
   providerError: Error | undefined;
-  ether: Web3Provider | undefined;
+  ether: Web3Provider | JsonRpcProvider | undefined;
   rawBalance?: BigNumber;
   etherSymbol: string;
 }
@@ -83,14 +83,16 @@ function WalletProvider(props: { children?: React.ReactNode }) {
 
   const [status, setStatus] = React.useState<WalletStatus>("disconnected");
 
-  const [provider, setProvider] = React.useState<Web3Provider | undefined>();
+  const [provider, setProvider] = React.useState<
+    Web3Provider | JsonRpcProvider | undefined
+  >();
 
   const context = useWeb3React<Web3Provider>();
 
   const prevStatus = usePrev(status);
 
   const {
-    chainId,
+    chainId = chain.bep,
     connector,
     deactivate,
     activate,
@@ -127,8 +129,15 @@ function WalletProvider(props: { children?: React.ReactNode }) {
       setBalance("");
       setRawBalance(undefined);
       setProvider(undefined);
+
+      if (chainId === chain.polygon) {
+        setProvider(new JsonRpcProvider(config.POLYGON_RPC_URL, chain.polygon));
+      }
+      if (chainId === chain.bep) {
+        setProvider(new JsonRpcProvider(config.BSC_RPC_URL, chain.bep));
+      }
     }
-  }, [account, library]);
+  }, [account, chainId, library]);
 
   const reset = React.useCallback(() => {
     if (connector && (connector as any).close) {
