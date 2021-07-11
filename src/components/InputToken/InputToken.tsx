@@ -76,7 +76,12 @@ export default function InputToken(props: InputTokenProps) {
         />
         <Box ml="auto" display="flex">
           {showMaxButton && (
-            <Box as="button" color="primary" onClick={onMax}>
+            <Box
+              as="button"
+              color="primary"
+              onClick={onMax}
+              disabled={disabled}
+            >
               Max
             </Box>
           )}

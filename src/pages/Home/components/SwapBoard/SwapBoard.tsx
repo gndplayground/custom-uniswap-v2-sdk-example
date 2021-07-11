@@ -380,7 +380,7 @@ function SwapBoard() {
           <InputToken
             onMax={handleMax}
             showMaxButton={showMaxButton}
-            disabled={isExecuting || isApproving}
+            disabled={isExecuting || isApproving || swap.isSwapping}
             inputProps={{
               value: formattedAmounts[Field.INPUT],
             }}
@@ -410,7 +410,7 @@ function SwapBoard() {
         </Box>
         <Box mt="24px">
           <InputToken
-            disabled={isExecuting || isApproving}
+            disabled={isExecuting || isApproving || swap.isSwapping}
             inputProps={{
               value: formattedAmounts[Field.OUTPUT],
             }}
