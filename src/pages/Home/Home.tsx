@@ -18,7 +18,7 @@ function Home() {
   return (
     <div>
       <Header />
-      <Box as="section" pt="50px">
+      <Box as="section" py="50px">
         <AppContainer>
           <Box maxWidth="700px" mx="auto" px="16px">
             <Box as="p">
