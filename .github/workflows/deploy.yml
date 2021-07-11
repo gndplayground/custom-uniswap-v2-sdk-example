@@ -38,7 +38,7 @@ jobs:
           REACT_APP_POLYGON_CHAIN: 137
           REACT_APP_BSC_RPC_URL: https://bsc-dataseed1.ninicoin.io
           REACT_APP_POLYGON_RPC_URL: https://rpc-mainnet.matic.network
-          PUBLIC_URL: https://gndplayground.github.io/custom-uniswap-v2-sdk-example/
+          PUBLIC_URL: https://gndplayground.github.io/custom-uniswap-v2-sdk-example
           CI: false
         run: yarn run build
 
