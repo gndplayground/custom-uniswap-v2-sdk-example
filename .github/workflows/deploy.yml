@@ -28,10 +28,19 @@ jobs:
           restore-keys: |
             yarn-
 
-      - name: Install dependencies and build 🔧
-        run: |
-          yarn install --frozen-lockfile
-          yarn run build
+      - name: Install dependencies 🔧
+        run: yarn install --frozen-lockfile
+
+      - name: Build 🔧
+        env:
+          REACT_APP_BEP_CHAIN: 56
+          REACT_APP_ERC_CHAIN: 1
+          REACT_APP_POLYGON_CHAIN: 137
+          REACT_APP_BSC_RPC_URL: https://bsc-dataseed1.ninicoin.io
+          REACT_APP_POLYGON_RPC_URL: https://rpc-mainnet.matic.network
+          PUBLIC_URL: https://gndplayground.github.io/custom-uniswap-v2-sdk-example/
+          CI: false
+        run: yarn run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4

@@ -5,10 +5,11 @@ import AppContainer from "../../components/AppContainer";
 import Box from "../../components/Box";
 import SwapBoard from "./components/SwapBoard";
 import { SupportedChainId } from "../../constants/chain";
+import { config } from "../../config";
 
 const logos: { [chainId: number]: string } = {
-  [SupportedChainId.BSC]: "/images/icon/bsc-wallet.svg",
-  [SupportedChainId.MATIC]: "/images/icon/polygon-white.svg",
+  [SupportedChainId.BSC]: `${config.PUBLIC_URL}images/icon/bsc-wallet.svg`,
+  [SupportedChainId.MATIC]: `${config.PUBLIC_URL}images/icon/polygon-white.svg`,
 };
 
 function Home() {

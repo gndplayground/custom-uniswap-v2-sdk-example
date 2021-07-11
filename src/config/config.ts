@@ -5,6 +5,7 @@ export interface Config {
   QUICK_SWAP_ROUTER: string;
   PANCAKE_CODE_HASH: string;
   QUICK_SWAP_CODE_HASH: string;
+  PUBLIC_URL: string;
 }
 
 const config: Config = {
@@ -16,6 +17,7 @@ const config: Config = {
     "0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5",
   QUICK_SWAP_CODE_HASH:
     "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f",
+  PUBLIC_URL: process.env.PUBLIC_URL || "/",
 };
 
 const localStorageKey = {

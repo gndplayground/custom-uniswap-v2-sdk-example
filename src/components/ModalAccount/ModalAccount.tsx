@@ -2,7 +2,7 @@ import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Box } from "../Box";
 import Modal from "../Modal";
-import { chain, localStorageKey } from "../../config";
+import { chain, config, localStorageKey } from "../../config";
 import Close from "../../icons/Close";
 import useWallet from "../../hooks/useWallet";
 import ButtonCore from "../ButtonCore";
@@ -96,7 +96,7 @@ function ModalAccount(props: ModalAccountProps) {
             <Box
               mr="12px"
               as="img"
-              src="/images/icon/external-link.svg"
+              src={`${config.PUBLIC_URL}images/icon/external-link.svg`}
               alt=""
             />
             View in explorer
@@ -108,7 +108,12 @@ function ModalAccount(props: ModalAccountProps) {
             }}
           >
             <Box as="button" display="flex" alignItems="center">
-              <Box mr="12px" as="img" src="/images/icon/copy.svg" alt="" />
+              <Box
+                mr="12px"
+                as="img"
+                src={`${config.PUBLIC_URL}images/icon/copy.svg`}
+                alt=""
+              />
               Copy address
             </Box>
           </CopyToClipboard>

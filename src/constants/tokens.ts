@@ -1,6 +1,7 @@
 import { Token, Ether } from "@uniswap/sdk-core";
 import { TokenListDetail } from "../types";
 import { SupportedChainId } from "./chain";
+import { config } from "../config";
 
 export const BASE_TOKENS = {
   [SupportedChainId.BSC]: {
@@ -129,7 +130,7 @@ export const ETHER_TOKEN_LIST: { [chainId: number]: TokenListDetail } = {
     name: "BNB Token",
     decimals: 18,
     address: "",
-    logoURI: "/images/icon/tokens/bnb.png",
+    logoURI: `${config.PUBLIC_URL}images/icon/tokens/bnb.png`,
     isNative: true,
   },
   [SupportedChainId.MATIC]: {
@@ -138,7 +139,7 @@ export const ETHER_TOKEN_LIST: { [chainId: number]: TokenListDetail } = {
     name: "MATIC Token",
     decimals: 18,
     address: "",
-    logoURI: "/images/icon/tokens/matic.svg",
+    logoURI: `${config.PUBLIC_URL}images/icon/tokens/matic.svg`,
     isNative: true,
   },
 };

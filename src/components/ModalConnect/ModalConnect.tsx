@@ -2,7 +2,7 @@ import React from "react";
 import Box from "../Box";
 import Modal from "../Modal";
 import Close from "../../icons/Close";
-import { chain } from "../../config";
+import { chain, config } from "../../config";
 
 export interface ModalConnectProps {
   currentChainId?: number;
@@ -14,12 +14,12 @@ export interface ModalConnectProps {
 const networks = [
   {
     name: "Binance Chain",
-    icon: "/images/icon/bsc-wallet.svg",
+    icon: `${config.PUBLIC_URL}images/icon/bsc-wallet.svg`,
     chainId: chain.bep,
   },
   {
     name: "Polygon",
-    icon: "/images/icon/polygon-white.svg",
+    icon: `${config.PUBLIC_URL}images/icon/polygon-white.svg`,
     chainId: chain.polygon,
   },
 ];
@@ -28,24 +28,24 @@ const wallets = {
   [chain.polygon]: [
     {
       name: "Metamask",
-      icon: "/images/icon/metamask-fox.svg",
+      icon: `${config.PUBLIC_URL}images/icon/metamask-fox.svg`,
       connector: "injected",
     },
   ],
   [chain.bep]: [
     {
       name: "Metamask",
-      icon: "/images/icon/metamask-fox.svg",
+      icon: `${config.PUBLIC_URL}images/icon/metamask-fox.svg`,
       connector: "injected",
     },
     {
       name: "Binance Chain Wallet",
-      icon: "/images/icon/bsc-wallet.svg",
+      icon: `${config.PUBLIC_URL}images/icon/bsc-wallet.svg`,
       connector: "bsc",
     },
     {
       name: "Wallet Connect",
-      icon: "/images/icon/wallet-connect.png",
+      icon: `${config.PUBLIC_URL}images/icon/wallet-connect.png`,
       connector: "walletconnect",
     },
   ],
