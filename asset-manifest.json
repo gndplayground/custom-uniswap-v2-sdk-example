@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/css/main.4a4137e4.chunk.css",
-    "main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.6e5ea4a0.chunk.js",
-    "main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.6e5ea4a0.chunk.js.map",
+    "main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.c3cc8345.chunk.js",
+    "main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.c3cc8345.chunk.js.map",
     "runtime-main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/runtime-main.330230eb.js",
     "runtime-main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/runtime-main.330230eb.js.map",
     "static/js/2.613f8dd9.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.613f8dd9.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.330230eb.js",
     "static/js/2.613f8dd9.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.6e5ea4a0.chunk.js"
+    "static/js/main.c3cc8345.chunk.js"
   ]
 }
