@@ -72,7 +72,7 @@ export function useCheckApproval(
         setApprovalPending(false);
         toast({
           description: "Failed to approve token",
-          variant: "error",
+          status: "error",
         });
         // eslint-disable-next-line no-console
         console.error("Failed to approve token", e);

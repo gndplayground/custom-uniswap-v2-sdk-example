@@ -41,6 +41,8 @@ const TokenLists: { [chainId: number]: string } = {
     "https://unpkg.com/quickswap-default-token-list@1.0.71/build/quickswap-default.tokenlist.json",
   [SupportedChainId.BSC]:
     "https://tokens.pancakeswap.finance/pancakeswap-extended.json",
+  [SupportedChainId.AVAX]:
+    "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/joe.tokenlist.json",
 };
 
 function SwapBoard() {

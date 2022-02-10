@@ -4,8 +4,9 @@ import { parseEther } from "@ethersproject/units";
 import { SupportedChainId } from "../constants/chain";
 
 const MIN_NATIVE_CURRENCY_FOR_GAS: { [key: number]: JSBI } = {
-  [SupportedChainId.BSC]: JSBI.BigInt(parseEther("0.003")),
-  [SupportedChainId.MATIC]: JSBI.BigInt(parseEther("0.0006")),
+  [SupportedChainId.BSC]: JSBI.BigInt(parseEther("0.01")),
+  [SupportedChainId.MATIC]: JSBI.BigInt(parseEther("0.01")),
+  [SupportedChainId.AVAX]: JSBI.BigInt(parseEther("0.01")),
 };
 
 export function maxAmountSpend(

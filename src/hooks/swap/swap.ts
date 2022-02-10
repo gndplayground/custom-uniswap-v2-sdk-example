@@ -6,8 +6,10 @@ import { Interface } from "@ethersproject/abi";
 import { BigNumber } from "@ethersproject/bignumber";
 import { Contract } from "@ethersproject/contracts";
 import { Currency, Percent, TradeType } from "@uniswap/sdk-core";
+import { chain, etherMethods } from "../../config";
 import useWallet from "../useWallet";
 import UNIRouter from "../../config/abis/IUniswapV2Router02.json";
+import JoeRouter from "../../config/abis/IJoeRouter02.json";
 import { ROUTERS } from "../../constants/routing";
 import { getTokenSymbol } from "../../utils/tokens";
 import useToast from "../useToast";
@@ -84,7 +86,10 @@ export function useSwap(dat: {
         setSwapping(true);
         const contract = new Contract(
           ROUTERS[wallet.chainId],
-          new Interface(UNIRouter.abi),
+          // @todo maybe should have better way config these
+          new Interface(
+            wallet.chainId === chain.avax ? JoeRouter : UNIRouter.abi
+          ),
           wallet.ether.getSigner()
         );
 
@@ -99,6 +104,7 @@ export function useSwap(dat: {
             ),
             recipient: wallet.account,
             ttl: deadline,
+            etherMethods: etherMethods[wallet.chainId],
           })
         );
 
@@ -112,6 +118,7 @@ export function useSwap(dat: {
               ),
               recipient: wallet.account,
               ttl: deadline,
+              etherMethods: etherMethods[wallet.chainId],
             })
           );
         }
@@ -181,7 +188,7 @@ export function useSwap(dat: {
             );
             toast({
               description: `Failed swap. ${e.err}`,
-              variant: "error",
+              status: "error",
             });
           });
           return;
@@ -214,13 +221,13 @@ export function useSwap(dat: {
         const base = `Swap ${inputAmount} ${inputSymbol} for ${outputAmount} ${outputSymbol}`;
         toast({
           description: base,
-          variant: "success",
+          status: "success",
         });
       } catch (e) {
         if (e?.code === 4001) {
           toast({
             description: "Transaction rejected.",
-            variant: "info",
+            status: "info",
           });
         } else {
           // eslint-disable-next-line no-console
@@ -228,7 +235,7 @@ export function useSwap(dat: {
           toast({
             description:
               "Failed swap. Please try to adjust slippage tolerance or try again later.",
-            variant: "error",
+            status: "error",
           });
         }
       } finally {

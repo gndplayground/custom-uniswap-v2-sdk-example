@@ -5470,10 +5470,10 @@ csstype@^3.0.6:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
-custom-uniswap-v2-sdk@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/custom-uniswap-v2-sdk/-/custom-uniswap-v2-sdk-3.1.0.tgz#2a991ee62a5dc6ae49ebe34c8b4a22d6f436ea7b"
-  integrity sha512-BDtHuowZtoZ2iuZUHhpXTRG1JDeHrk8fRBVfmpnm1rzcBuiTJebnZQR1lPVDz5WhOH5ZSB36kSFbATR4CXJl6w==
+custom-uniswap-v2-sdk@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/custom-uniswap-v2-sdk/-/custom-uniswap-v2-sdk-3.2.0.tgz#1054b1e614e95718b6210cf69030c5e5cb7f81c9"
+  integrity sha512-tKQPU93VlMAXbHexwtnlETXvgtTcF53g3+enfzP1TIphA9/lH11/0omPSfgxN0bhP6fbAZKrwiQvEY+HJegsog==
   dependencies:
     "@ethersproject/address" "^5.0.0"
     "@ethersproject/solidity" "^5.0.0"

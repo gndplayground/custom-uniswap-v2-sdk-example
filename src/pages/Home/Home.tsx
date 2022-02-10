@@ -10,6 +10,7 @@ import { config } from "../../config";
 const logos: { [chainId: number]: string } = {
   [SupportedChainId.BSC]: `${config.PUBLIC_URL}images/icon/bsc-wallet.svg`,
   [SupportedChainId.MATIC]: `${config.PUBLIC_URL}images/icon/polygon-white.svg`,
+  [SupportedChainId.AVAX]: `${config.PUBLIC_URL}images/icon/avax.svg`,
 };
 
 function Home() {
@@ -44,11 +45,12 @@ function Home() {
               .
             </Box>
             <Box as="p">
-              The website uses <strong>PancakeSwap</strong> and{" "}
-              <strong>QuickSwap</strong> liquidity pools to give an example
-              token swapping. <br /> Because the website is used for demo
-              purposes so the code might not always stay updated with the
-              development of both platforms. Use with caution..
+              The website uses <strong>PancakeSwap (BSC)</strong>,{" "}
+              <strong>QuickSwap (Polygon)</strong> and{" "}
+              <strong>Trader Joe (Avalanche)</strong> liquidity pools to give an
+              example token swapping. <br /> Because the website is used for
+              demo purposes so the code might not always stay updated with the
+              development of both platforms. Use with caution.
             </Box>
           </Box>
 

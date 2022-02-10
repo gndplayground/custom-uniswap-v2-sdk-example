@@ -22,9 +22,21 @@ const networks = [
     icon: `${config.PUBLIC_URL}images/icon/polygon-white.svg`,
     chainId: chain.polygon,
   },
+  {
+    name: "Avalanche",
+    icon: `${config.PUBLIC_URL}images/icon/avax.svg`,
+    chainId: chain.avax,
+  },
 ];
 
 const wallets = {
+  [chain.avax]: [
+    {
+      name: "Metamask",
+      icon: `${config.PUBLIC_URL}images/icon/metamask-fox.svg`,
+      connector: "injected",
+    },
+  ],
   [chain.polygon]: [
     {
       name: "Metamask",

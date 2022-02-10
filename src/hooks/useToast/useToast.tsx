@@ -9,6 +9,5 @@ export default function useToast(options?: UseToastOptions) {
       ...options,
     };
   }, [options]);
-
   return useToastCore(op);
 }

@@ -1,11 +1,13 @@
 import { Token } from "@uniswap/sdk-core";
+import { config } from "../config";
 import { BASE_TOKENS, WETH9_EXTENDED } from "./tokens";
 import { SupportedChainId } from "./chain";
 import JSBI from "jsbi";
 
 export const ROUTERS: { [chainId: number]: string } = {
-  [SupportedChainId.BSC]: "0x10ED43C718714eb63d5aA57B78B54704E256024E",
-  [SupportedChainId.MATIC]: "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff",
+  [SupportedChainId.BSC]: config.PANCAKE_ROUTER,
+  [SupportedChainId.MATIC]: config.QUICK_SWAP_ROUTER,
+  [SupportedChainId.AVAX]: config.TRADER_JOE_ROUTER,
 };
 
 type ChainTokenList = {
@@ -15,6 +17,7 @@ type ChainTokenList = {
 const WETH_ONLY: ChainTokenList = {
   [SupportedChainId.MATIC]: [WETH9_EXTENDED[SupportedChainId.MATIC]],
   [SupportedChainId.BSC]: [WETH9_EXTENDED[SupportedChainId.BSC]],
+  [SupportedChainId.AVAX]: [WETH9_EXTENDED[SupportedChainId.AVAX]],
 };
 
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
@@ -38,6 +41,14 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BASE_TOKENS[SupportedChainId.MATIC].DAI,
     BASE_TOKENS[SupportedChainId.MATIC].MAUSDC,
   ],
+  [SupportedChainId.AVAX]: [
+    ...WETH_ONLY[SupportedChainId.AVAX],
+    BASE_TOKENS[SupportedChainId.AVAX].JOE,
+    BASE_TOKENS[SupportedChainId.AVAX].PNG,
+    BASE_TOKENS[SupportedChainId.AVAX].USDTe,
+    BASE_TOKENS[SupportedChainId.AVAX].DAIe,
+    BASE_TOKENS[SupportedChainId.AVAX].USDCe,
+  ],
 };
 
 export const ADDITIONAL_BASES: {
@@ -45,6 +56,7 @@ export const ADDITIONAL_BASES: {
 } = {
   [SupportedChainId.BSC]: {},
   [SupportedChainId.MATIC]: {},
+  [SupportedChainId.AVAX]: {},
 };
 
 export const CUSTOM_BASES: {
@@ -52,6 +64,7 @@ export const CUSTOM_BASES: {
 } = {
   [SupportedChainId.BSC]: {},
   [SupportedChainId.MATIC]: {},
+  [SupportedChainId.AVAX]: {},
 };
 
 export const FEES_NUMERATORS: {
@@ -59,6 +72,7 @@ export const FEES_NUMERATORS: {
 } = {
   [SupportedChainId.BSC]: JSBI.BigInt(9975),
   [SupportedChainId.MATIC]: JSBI.BigInt(997),
+  [SupportedChainId.AVAX]: JSBI.BigInt(997),
 };
 
 export const FEES_DENOMINATORS: {
@@ -66,4 +80,5 @@ export const FEES_DENOMINATORS: {
 } = {
   [SupportedChainId.BSC]: JSBI.BigInt(10000),
   [SupportedChainId.MATIC]: JSBI.BigInt(1000),
+  [SupportedChainId.AVAX]: JSBI.BigInt(1000),
 };

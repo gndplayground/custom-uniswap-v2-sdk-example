@@ -121,6 +121,43 @@ export const BASE_TOKENS = {
       "USD Coin"
     ),
   },
+  [SupportedChainId.AVAX]: {
+    PNG: new Token(
+      SupportedChainId.AVAX,
+      "0x60781C2586D68229fde47564546784ab3fACA982",
+      18,
+      "PNG",
+      "Pangolin"
+    ),
+    JOE: new Token(
+      SupportedChainId.AVAX,
+      "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+      18,
+      "JOE",
+      "JOE Token"
+    ),
+    USDTe: new Token(
+      SupportedChainId.AVAX,
+      "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+      6,
+      "USDT.e",
+      "Tether USD"
+    ),
+    DAIe: new Token(
+      SupportedChainId.AVAX,
+      "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+      18,
+      "DAI.e",
+      "Dai Stablecoin"
+    ),
+    USDCe: new Token(
+      SupportedChainId.AVAX,
+      "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+      6,
+      "USDC.e",
+      "USD Coin"
+    ),
+  },
 };
 
 export const ETHER_TOKEN_LIST: { [chainId: number]: TokenListDetail } = {
@@ -142,6 +179,15 @@ export const ETHER_TOKEN_LIST: { [chainId: number]: TokenListDetail } = {
     logoURI: `${config.PUBLIC_URL}images/icon/tokens/matic.svg`,
     isNative: true,
   },
+  [SupportedChainId.AVAX]: {
+    chainId: SupportedChainId.AVAX,
+    symbol: "AVAX",
+    name: "AVAX Token",
+    decimals: 18,
+    address: "",
+    logoURI: `${config.PUBLIC_URL}images/icon/tokens/avax.svg`,
+    isNative: true,
+  },
 };
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
@@ -158,6 +204,13 @@ export const WETH9_EXTENDED: { [chainId: number]: Token } = {
     18,
     "WMATIC",
     "Wrapped MATIC"
+  ),
+  [SupportedChainId.AVAX]: new Token(
+    SupportedChainId.AVAX,
+    "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+    18,
+    "WAVAX",
+    "Wrapped AVAX"
   ),
 };
 

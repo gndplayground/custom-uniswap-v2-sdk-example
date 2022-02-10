@@ -53,13 +53,17 @@ function ModalSelectToken(props: ModalSelectTokenProps) {
       axios
         .get<TokenList>(tokenList)
         .then((d) => {
-          resolve(d.data.tokens);
+          resolve(
+            d.data.tokens.filter((t) => {
+              return t.chainId === chainId;
+            })
+          );
         })
         .catch((e) => {
           reject(e);
         });
     });
-  }, [tokenList]);
+  }, [chainId, tokenList]);
 
   const { fetch, isFetched, result } = useSimpleQuery<TokenListDetail[]>(
     memoQuery,

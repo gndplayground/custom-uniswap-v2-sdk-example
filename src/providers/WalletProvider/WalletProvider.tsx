@@ -7,6 +7,7 @@ import { formatEther } from "@ethersproject/units";
 import { BigNumber, ethers } from "ethers";
 import { chain, config, localStorageKey } from "../../config";
 import {
+  addChainAvax,
   addChainBSC,
   addChainMatic,
   getMetamaskChain,
@@ -40,14 +41,19 @@ export const setupNetwork = async (chainId: number) => {
   const provider = (window as any).ethereum;
   if (provider && isMetamask()) {
     try {
-      if (chainId === chain.bep) {
-        await addChainBSC();
-        return true;
-      }
-
-      if (chainId === chain.polygon) {
-        await addChainMatic();
-        return true;
+      switch (chainId) {
+        case chain.bep: {
+          await addChainBSC();
+          return true;
+        }
+        case chain.polygon: {
+          await addChainMatic();
+          return true;
+        }
+        case chain.avax: {
+          await addChainAvax();
+          return true;
+        }
       }
       return false;
     } catch (error) {
@@ -58,7 +64,7 @@ export const setupNetwork = async (chainId: number) => {
   } else {
     // eslint-disable-next-line no-console
     console.error(
-      "Can't setup the BSC network on metamask because window.ethereum is undefined"
+      `Can't setup the network id ${chainId} on metamask because window.ethereum is undefined`
     );
     return false;
   }
@@ -111,6 +117,10 @@ function WalletProvider(props: { children?: React.ReactNode }) {
         setEtherSymbol("MATIC");
         break;
       }
+      case chain.avax: {
+        setEtherSymbol("AVAX");
+        break;
+      }
       default: {
         setEtherSymbol("ETH");
       }
@@ -130,11 +140,21 @@ function WalletProvider(props: { children?: React.ReactNode }) {
       setRawBalance(undefined);
       setProvider(undefined);
 
-      if (chainId === chain.polygon) {
-        setProvider(new JsonRpcProvider(config.POLYGON_RPC_URL, chain.polygon));
-      }
-      if (chainId === chain.bep) {
-        setProvider(new JsonRpcProvider(config.BSC_RPC_URL, chain.bep));
+      switch (chainId) {
+        case chain.bep: {
+          setProvider(new JsonRpcProvider(config.BSC_RPC_URL, chain.bep));
+          break;
+        }
+        case chain.polygon: {
+          setProvider(
+            new JsonRpcProvider(config.POLYGON_RPC_URL, chain.polygon)
+          );
+          break;
+        }
+        case chain.avax: {
+          setProvider(new JsonRpcProvider(config.AVAX_RPC_URL, chain.avax));
+          break;
+        }
       }
     }
   }, [account, chainId, library]);

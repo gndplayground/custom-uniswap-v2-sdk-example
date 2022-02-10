@@ -44,8 +44,28 @@ export async function addChainMatic() {
           symbol: "MATIC",
           decimals: 18,
         },
-        rpcUrls: ["https://rpc-mainnet.maticvigil.com/"],
+        rpcUrls: ["https://polygon-rpc.com"],
         blockExplorerUrls: ["https://polygonscan.com"],
+      },
+    ],
+  });
+}
+
+export async function addChainAvax() {
+  const provider = (window as any).ethereum;
+  await provider.request({
+    method: "wallet_addEthereumChain",
+    params: [
+      {
+        chainId: `0x${chain.avax.toString(16)}`,
+        chainName: "Avalanche Network",
+        nativeCurrency: {
+          name: "Avalanche",
+          symbol: "AVAX",
+          decimals: 18,
+        },
+        rpcUrls: ["https://api.avax.network/ext/bc/C/rpc"],
+        blockExplorerUrls: ["https://snowtrace.io"],
       },
     ],
   });

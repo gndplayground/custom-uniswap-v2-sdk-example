@@ -34,6 +34,9 @@ const INPUT_FRACTION_AFTER_FEES: { [chainId: number]: Percent } = {
   [SupportedChainId.MATIC]: ONE_HUNDRED_PERCENT.subtract(
     new Percent(JSBI.BigInt(30), JSBI.BigInt(10000))
   ),
+  [SupportedChainId.AVAX]: ONE_HUNDRED_PERCENT.subtract(
+    new Percent(JSBI.BigInt(30), JSBI.BigInt(10000))
+  ),
 };
 
 export function isTradeBetter(
