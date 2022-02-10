@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/css/main.4a4137e4.chunk.css",
-    "main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.ff840304.chunk.js",
-    "main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.ff840304.chunk.js.map",
-    "runtime-main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/runtime-main.58a43021.js",
-    "runtime-main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/runtime-main.58a43021.js.map",
-    "static/js/2.377bfcde.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.377bfcde.chunk.js",
-    "static/js/2.377bfcde.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.377bfcde.chunk.js.map",
-    "static/js/3.28fcd5a9.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/3.28fcd5a9.chunk.js",
-    "static/js/3.28fcd5a9.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/3.28fcd5a9.chunk.js.map",
-    "static/js/4.b8a2cadf.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/4.b8a2cadf.chunk.js",
-    "static/js/4.b8a2cadf.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/4.b8a2cadf.chunk.js.map",
-    "static/js/5.3f5f4481.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/5.3f5f4481.chunk.js",
-    "static/js/5.3f5f4481.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/5.3f5f4481.chunk.js.map",
-    "static/js/6.a9420ac4.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/6.a9420ac4.chunk.js",
-    "static/js/6.a9420ac4.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/6.a9420ac4.chunk.js.map",
-    "static/js/7.dc76fa50.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/7.dc76fa50.chunk.js",
-    "static/js/7.dc76fa50.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/7.dc76fa50.chunk.js.map",
+    "main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.d1c31885.chunk.js",
+    "main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/main.d1c31885.chunk.js.map",
+    "runtime-main.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/runtime-main.73f08e85.js",
+    "runtime-main.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/runtime-main.73f08e85.js.map",
+    "static/js/2.1345173a.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.1345173a.chunk.js",
+    "static/js/2.1345173a.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.1345173a.chunk.js.map",
+    "static/js/3.ff5aefc4.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/3.ff5aefc4.chunk.js",
+    "static/js/3.ff5aefc4.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/3.ff5aefc4.chunk.js.map",
+    "static/js/4.80a64461.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/4.80a64461.chunk.js",
+    "static/js/4.80a64461.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/4.80a64461.chunk.js.map",
+    "static/js/5.247b1156.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/5.247b1156.chunk.js",
+    "static/js/5.247b1156.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/5.247b1156.chunk.js.map",
+    "static/js/6.517b2a63.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/6.517b2a63.chunk.js",
+    "static/js/6.517b2a63.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/6.517b2a63.chunk.js.map",
+    "static/js/7.20c1b65e.chunk.js": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/7.20c1b65e.chunk.js",
+    "static/js/7.20c1b65e.chunk.js.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/7.20c1b65e.chunk.js.map",
     "index.html": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/index.html",
     "static/css/main.4a4137e4.chunk.css.map": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/css/main.4a4137e4.chunk.css.map",
-    "static/js/2.377bfcde.chunk.js.LICENSE.txt": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.377bfcde.chunk.js.LICENSE.txt",
-    "static/js/3.28fcd5a9.chunk.js.LICENSE.txt": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/3.28fcd5a9.chunk.js.LICENSE.txt"
+    "static/js/2.1345173a.chunk.js.LICENSE.txt": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/2.1345173a.chunk.js.LICENSE.txt",
+    "static/js/3.ff5aefc4.chunk.js.LICENSE.txt": "https://gndplayground.github.io/custom-uniswap-v2-sdk-example/static/js/3.ff5aefc4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.58a43021.js",
-    "static/js/2.377bfcde.chunk.js",
+    "static/js/runtime-main.73f08e85.js",
+    "static/js/2.1345173a.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.ff840304.chunk.js"
+    "static/js/main.d1c31885.chunk.js"
   ]
 }
